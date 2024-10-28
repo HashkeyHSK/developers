@@ -1,0 +1,57 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Grants Application Template
+        请选择您申请的 Session 并填写以下信息。
+
+  - type: dropdown
+    id: session
+    attributes:
+      label: Session
+      description: 请选择您要申请的 Session
+      options:
+        - Session 1
+    validations:
+      required: true
+
+  - type: input
+    id: project-name
+    attributes:
+      label: 项目名称
+      placeholder: 您的项目名称
+    validations:
+      required: true
+
+  - type: textarea
+    id: project-description
+    attributes:
+      label: 项目描述
+      description: 请详细描述您的项目
+      placeholder: |
+        - 项目目标
+        - 技术架构
+        - 创新点
+    validations:
+      required: true
+
+  - type: textarea
+    id: grant-usage
+    attributes:
+      label: 资金使用计划
+      description: 请说明您计划如何使用这笔资金
+      placeholder: 详细说明资金分配方案...
+    validations:
+      required: true
+
+  - type: textarea
+    id: timeline
+    attributes:
+      label: 项目时间线
+      description: 请提供项目开发时间线
+      placeholder: |
+        第一个月：
+        - 任务1
+        - 任务2
+    validations:
+      required: true
