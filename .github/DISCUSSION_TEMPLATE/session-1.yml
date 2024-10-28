@@ -1,72 +1,170 @@
+title: "Hashkey Grant Application"
 body:
   - type: markdown
     attributes:
       value: |
-        # Session 1 Grant Application
-        感谢您参与 Session 1 的 Grants 申请！请按照以下模板填写您的申请信息。
+        # Basic Information
+        Thank you for applying to Hashkey Grants! Please fill out the following information carefully.
+
+  - type: dropdown
+    id: grant-type
+    attributes:
+      label: Grant Type
+      description: Select the type of grant you're applying for
+      options:
+        - Session 1
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        # Contact Information
 
   - type: input
-    id: project-name
+    id: email
     attributes:
-      label: 项目名称
-      placeholder: 您的项目名称
+      label: Email
+      placeholder: Your email address
+    validations:
+      required: true
+
+  - type: input
+    id: telegram
+    attributes:
+      label: Telegram
+      placeholder: Your Telegram handle
+
+  - type: input
+    id: twitter
+    attributes:
+      label: X/Twitter Handle
+      placeholder: Your Twitter handle
+
+  - type: input
+    id: discord
+    attributes:
+      label: Discord/Community
+      placeholder: Your Discord or community information
+
+  - type: markdown
+    attributes:
+      value: |
+        # Project Details
+
+  - type: textarea
+    id: previous-application
+    attributes:
+      label: Previous Application
+      description: If this is a resubmission, please provide the link to the previous application and explain the main improvements. If not, please write N/A
+      placeholder: Previous application details or N/A
     validations:
       required: true
 
   - type: textarea
-    id: project-description
+    id: code-audit
     attributes:
-      label: 项目描述
-      description: 请详细描述您的项目
+      label: Code Audit
+      description: Has your project undergone a code audit?
+      placeholder: Please provide code audit details
+    validations:
+      required: true
+
+  - type: textarea
+    id: project-info
+    attributes:
+      label: Project Information
+      description: Please answer the following questions
       placeholder: |
-        - 项目目标
-        - 技术架构
-        - 创新点
+        1. Project Description and Objectives:
+        2. Success Potential:
+           - Explain why your project is likely to succeed (consider market demand, technical feasibility, and team capability)
+        3. Mission Alignment:
+           - Describe how your project aligns with Hashkey's goals
+        4. Innovation:
+           - Highlight what makes your project unique or innovative
+        5. Is it open source?
+        6. Free or fee-based for end users?
+        7. Interoperability with Hashkey ecosystem:
     validations:
       required: true
 
-  - type: textarea
-    id: grant-usage
+  - type: markdown
     attributes:
-      label: 资金使用计划
-      description: 请说明您计划如何使用这笔资金
-      placeholder: 详细说明资金分配方案...
-    validations:
-      required: true
+      value: |
+        # Market Analysis
 
   - type: textarea
-    id: timeline
+    id: market-analysis
     attributes:
-      label: 项目时间线
-      description: 请提供项目开发时间线
+      label: Market Analysis
+      description: Please answer the following questions
       placeholder: |
-        第一个月：
-        - 任务1
-        - 任务2
-        
-        第二个月：
-        - 任务3
-        - 任务4
+        1. Competitors and Differentiation:
+        2. Current User Base and Estimation Method:
+    validations:
+      required: true
+
+  - type: input
+    id: wallet-address
+    attributes:
+      label: Recipient Address
+      description: Wallet address for receiving funds
+      placeholder: 0x...
     validations:
       required: true
 
   - type: textarea
-    id: team
+    id: budget-plan
     attributes:
-      label: 团队介绍
-      description: 请介绍您的团队成员及其角色
+      label: Budget and Plan
+      description: Please answer the following questions
       placeholder: |
-        - 成员1：职责/经验
-        - 成员2：职责/经验
+        1. Grant Size and Justification:
+        2. Project Execution Plan (Roadmap):
+        3. Token Distribution (Percentages and Initiatives):
+        4. Token Distribution Timeline:
+        5. Post-Incentives Sustainability:
+        6. Additional Accountability Info (Smart Contract Addresses, Wallet Addresses, etc.):
+    validations:
+      required: true
+
+  - type: textarea
+    id: hashkey-relationship
+    attributes:
+      label: Hashkey Relationship
+      description: Please answer the following questions
+      placeholder: |
+        1. Problem Solved for Hashkey:
+        2. Value Proposition:
+        3. Growth Potential for Hashkey:
+        4. Commitment to Building on Hashkey:
+        5. Deployment Status:
+    validations:
+      required: true
+
+  - type: textarea
+    id: milestones
+    attributes:
+      label: Milestones
+      description: Please list your project's key milestones
+      placeholder: |
+        1. Milestone 1: [Description and Timeline]
+        2. Milestone 2: [Description and Timeline]
+        3. Milestone 3: [Description and Timeline]
     validations:
       required: true
 
   - type: checkboxes
     id: terms
     attributes:
-      label: 确认事项
+      label: Terms Confirmation
       options:
-        - label: 我确认所有提供的信息都是真实的
+        - label: I confirm that all information provided is true and accurate
           required: true
-        - label: 我同意遵守项目的相关规定和要求
+        - label: I understand and agree to comply with the grant policies
+          required: true
+        - label: I understand the KYC requirements
+          required: true
+        - label: I confirm token distribution complies with legal requirements
           required: true
