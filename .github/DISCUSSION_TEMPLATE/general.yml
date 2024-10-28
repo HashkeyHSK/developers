@@ -1,0 +1,35 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # grants session 1 application
+        请填写以下申请信息。
+
+  - type: input
+    id: project-name
+    attributes:
+      label: project name
+      placeholder: 您的项目名称
+    validations:
+      required: true
+
+  - type: textarea
+    id: project-description
+    attributes:
+      label: project description
+      description: 请详细描述您的项目
+      placeholder: |
+        - 项目目标
+        - 技术架构
+        - 创新点
+    validations:
+      required: true
+
+  - type: textarea
+    id: grant-usage
+    attributes:
+      label: grant usage
+      description: 请说明您计划如何使用这笔资金
+      placeholder: 详细说明资金分配方案...
+    validations:
+      required: true
